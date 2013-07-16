@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# This command must be run as root on 10.5 and below, be sure to sudo the command in the NRPE config file.
+
 STATUS=`diskutil checkRAID 2>&1 | grep -i Status: | awk '{print $NF}'`
 
 
